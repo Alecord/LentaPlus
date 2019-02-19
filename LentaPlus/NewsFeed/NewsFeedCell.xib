@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MinionPro-Regular.otf">
+            <string>MinionPro-Regular</string>
+        </array>
+        <array key="PT Root UI_Bold.ttf">
+            <string>PTRootUI-Bold</string>
+        </array>
+        <array key="PT Root UI_Regular.ttf">
+            <string>PTRootUI-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="155" id="qwu-xW-xdJ" customClass="NewsCellController" customModule="LentaPlus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qwu-xW-xdJ" id="2Tu-Gw-Q5e">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 мин назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3j-tr-q5Q">
+                        <rect key="frame" x="15" y="20" width="74" height="16"/>
+                        <fontDescription key="fontDescription" name="PTRootUI-Regular" family="PT Root UI" pointSize="12"/>
+                        <color key="textColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="2pU-ZM-SOp">
+                        <rect key="frame" x="99" y="25.5" width="5" height="5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Культура" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzQ-lE-qOA">
+                        <rect key="frame" x="114" y="20" width="50" height="16"/>
+                        <fontDescription key="fontDescription" name="PTRootUI-Regular" family="PT Root UI" pointSize="12"/>
+                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-favorite-def" translatesAutoresizingMaskIntoConstraints="NO" id="bwJ-0r-xvb">
+                        <rect key="frame" x="345" y="20" width="13" height="16"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Названа доля живущих без телевидения россиян" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-Qp-nhr">
+                        <rect key="frame" x="15" y="41" width="345" height="52.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="OOw-XY-0XY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PTRootUI-Bold" family="PT Root UI" pointSize="20"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="В Минкомсвязи подсчитали риски от отключения аналогового сигнала" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaG-Cx-3NL">
+                        <rect key="frame" x="15" y="103.5" width="345" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="U01-kk-3C9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MinionPro-Regular" family="Minion Pro" pointSize="18"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2pU-ZM-SOp" firstAttribute="centerY" secondItem="e3j-tr-q5Q" secondAttribute="centerY" id="1bQ-eF-Hm0"/>
+                    <constraint firstItem="2pU-ZM-SOp" firstAttribute="leading" secondItem="e3j-tr-q5Q" secondAttribute="trailing" constant="10" id="7N3-vr-cdc"/>
+                    <constraint firstItem="e3j-tr-q5Q" firstAttribute="leading" secondItem="2Tu-Gw-Q5e" secondAttribute="leading" constant="15" id="8jL-sm-eql"/>
+                    <constraint firstItem="e3j-tr-q5Q" firstAttribute="top" secondItem="2Tu-Gw-Q5e" secondAttribute="top" constant="20" id="9pH-kY-Txm"/>
+                    <constraint firstItem="iaG-Cx-3NL" firstAttribute="width" secondItem="2Tu-Gw-Q5e" secondAttribute="width" constant="-30" id="BrT-Nz-o7O"/>
+                    <constraint firstAttribute="trailing" secondItem="bwJ-0r-xvb" secondAttribute="trailing" constant="17" id="M0H-Q5-DE0"/>
+                    <constraint firstItem="7yu-Qp-nhr" firstAttribute="top" secondItem="e3j-tr-q5Q" secondAttribute="bottom" constant="5" id="SHZ-nS-JTe"/>
+                    <constraint firstItem="7yu-Qp-nhr" firstAttribute="leading" secondItem="2Tu-Gw-Q5e" secondAttribute="leading" constant="15" id="Sb5-Y7-4sZ"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7yu-Qp-nhr" secondAttribute="trailing" constant="15" id="TJc-uk-3bh"/>
+                    <constraint firstItem="7yu-Qp-nhr" firstAttribute="width" secondItem="2Tu-Gw-Q5e" secondAttribute="width" constant="-30" id="UME-qF-GMF"/>
+                    <constraint firstItem="xzQ-lE-qOA" firstAttribute="firstBaseline" secondItem="e3j-tr-q5Q" secondAttribute="firstBaseline" id="WAv-51-Cyb"/>
+                    <constraint firstAttribute="bottom" secondItem="iaG-Cx-3NL" secondAttribute="bottom" constant="15" id="Yee-yI-nhv"/>
+                    <constraint firstItem="iaG-Cx-3NL" firstAttribute="leading" secondItem="2Tu-Gw-Q5e" secondAttribute="leading" constant="15" id="azg-ha-FcY"/>
+                    <constraint firstItem="bwJ-0r-xvb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xzQ-lE-qOA" secondAttribute="trailing" id="btZ-qd-DTQ"/>
+                    <constraint firstItem="bwJ-0r-xvb" firstAttribute="top" secondItem="2Tu-Gw-Q5e" secondAttribute="top" constant="20" id="cCi-Vb-P90"/>
+                    <constraint firstItem="xzQ-lE-qOA" firstAttribute="leading" secondItem="e3j-tr-q5Q" secondAttribute="trailing" constant="25" id="gsW-N0-RPD"/>
+                    <constraint firstItem="xzQ-lE-qOA" firstAttribute="baseline" secondItem="e3j-tr-q5Q" secondAttribute="baseline" id="hWZ-Om-XyN"/>
+                    <constraint firstAttribute="trailing" secondItem="iaG-Cx-3NL" secondAttribute="trailing" constant="15" id="ngl-Pu-XHy"/>
+                    <constraint firstItem="iaG-Cx-3NL" firstAttribute="top" secondItem="7yu-Qp-nhr" secondAttribute="bottom" constant="10" id="tJP-VN-GWQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="e3j-tr-q5Q" id="zHm-nw-dPj"/>
+                <outlet property="descrLabel" destination="iaG-Cx-3NL" id="UGW-jg-7US"/>
+                <outlet property="favoriteIcon" destination="bwJ-0r-xvb" id="ppr-fd-DtJ"/>
+                <outlet property="rubricLabel" destination="xzQ-lE-qOA" id="fZQ-IX-tFA"/>
+                <outlet property="titleLabel" destination="7yu-Qp-nhr" id="vXw-3Q-z6H"/>
+            </connections>
+            <point key="canvasLocation" x="335" y="99"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Circle" width="5" height="5"/>
+        <image name="icon-favorite-def" width="13" height="16"/>
+    </resources>
+</document>

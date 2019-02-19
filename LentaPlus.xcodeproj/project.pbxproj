@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A26567E3B15256AB8E4FEA89 /* Pods_LentaPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE3805A2AF9D0CE059960FC /* Pods_LentaPlus.framework */; };
+		C0387728220C5D9000CE3C66 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */; };
+		C038772A220C7DA700CE3C66 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0387729220C7DA700CE3C66 /* TableViewController.swift */; };
+		C0387730220C8C9700CE3C66 /* NewsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038772F220C8C9700CE3C66 /* NewsCellController.swift */; };
+		C0387732220C90A400CE3C66 /* NewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0387731220C90A400CE3C66 /* NewsFeedCell.xib */; };
+		C07627BF21F8FDEB00D9350A /* PT Root UI_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BE21F8FD9900D9350A /* PT Root UI_Bold.ttf */; };
+		C07627C021F8FDEB00D9350A /* PT Root UI_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */; };
+		C07627C121F8FDEB00D9350A /* PT Root UI_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */; };
+		C07627C221F8FDEB00D9350A /* PT Root UI_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */; };
+		C07627C321F8FDEB00D9350A /* MinionPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C07627B921F8FD5F00D9350A /* MinionPro-Bold.otf */; };
+		C07627C421F8FDEB00D9350A /* MinionPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BA21F8FD5F00D9350A /* MinionPro-Regular.otf */; };
+		C09BF4A921F8F84000FEA949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF4A821F8F84000FEA949 /* AppDelegate.swift */; };
+		C09BF4AE21F8F84000FEA949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4AC21F8F84000FEA949 /* Main.storyboard */; };
+		C09BF4B021F8F84200FEA949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4AF21F8F84200FEA949 /* Assets.xcassets */; };
+		C09BF4B321F8F84200FEA949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4B121F8F84200FEA949 /* LaunchScreen.storyboard */; };
+		C0AD03212211FDA8004B0594 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD03202211FDA8004B0594 /* ReadViewController.swift */; };
+		C0DDF0D22204D7AA0028A694 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDF0D12204D7AA0028A694 /* NewsViewController.swift */; };
+		C0E034212201A0D2005E69FD /* LentaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E034202201A0D2005E69FD /* LentaModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		005AD0D084F1040FAA8F240A /* Pods-LentaPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaPlus/Pods-LentaPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		033C3FCEAF0D3343EDB96CC7 /* Pods-LentaPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-LentaPlus/Pods-LentaPlus.release.xcconfig"; sourceTree = "<group>"; };
+		C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
+		C0387729220C7DA700CE3C66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C038772F220C8C9700CE3C66 /* NewsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellController.swift; sourceTree = "<group>"; };
+		C0387731220C90A400CE3C66 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
+		C07627B921F8FD5F00D9350A /* MinionPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MinionPro-Bold.otf"; sourceTree = "<group>"; };
+		C07627BA21F8FD5F00D9350A /* MinionPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MinionPro-Regular.otf"; sourceTree = "<group>"; };
+		C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Light.ttf"; sourceTree = "<group>"; };
+		C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Medium.ttf"; sourceTree = "<group>"; };
+		C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Regular.ttf"; sourceTree = "<group>"; };
+		C07627BE21F8FD9900D9350A /* PT Root UI_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Bold.ttf"; sourceTree = "<group>"; };
+		C09BF4A521F8F84000FEA949 /* LentaPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LentaPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09BF4A821F8F84000FEA949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C09BF4AD21F8F84000FEA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C09BF4AF21F8F84200FEA949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C09BF4B221F8F84200FEA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C09BF4B421F8F84200FEA949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0AD03202211FDA8004B0594 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		C0DDF0CF2204D1360028A694 /* PagingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PagingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DDF0D12204D7AA0028A694 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		C0E034202201A0D2005E69FD /* LentaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaModel.swift; sourceTree = "<group>"; };
+		DDE3805A2AF9D0CE059960FC /* Pods_LentaPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LentaPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C09BF4A221F8F84000FEA949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A26567E3B15256AB8E4FEA89 /* Pods_LentaPlus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DB215EF6F3A3E363ED0BC7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				005AD0D084F1040FAA8F240A /* Pods-LentaPlus.debug.xcconfig */,
+				033C3FCEAF0D3343EDB96CC7 /* Pods-LentaPlus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0387726220C3A1E00CE3C66 /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				C0E034202201A0D2005E69FD /* LentaModel.swift */,
+				C0387729220C7DA700CE3C66 /* TableViewController.swift */,
+				C038772F220C8C9700CE3C66 /* NewsCellController.swift */,
+				C0AD03202211FDA8004B0594 /* ReadViewController.swift */,
+				C0387731220C90A400CE3C66 /* NewsFeedCell.xib */,
+			);
+			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		C07627B821F8FA3100D9350A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C07627BE21F8FD9900D9350A /* PT Root UI_Bold.ttf */,
+				C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */,
+				C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */,
+				C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */,
+				C07627B921F8FD5F00D9350A /* MinionPro-Bold.otf */,
+				C07627BA21F8FD5F00D9350A /* MinionPro-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C09BF49C21F8F84000FEA949 = {
+			isa = PBXGroup;
+			children = (
+				C09BF4A721F8F84000FEA949 /* LentaPlus */,
+				C09BF4A621F8F84000FEA949 /* Products */,
+				5DB215EF6F3A3E363ED0BC7A /* Pods */,
+				E9EAE22E0E30AE1FD58FB862 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C09BF4A621F8F84000FEA949 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C09BF4A521F8F84000FEA949 /* LentaPlus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C09BF4A721F8F84000FEA949 /* LentaPlus */ = {
+			isa = PBXGroup;
+			children = (
+				C07627B821F8FA3100D9350A /* Fonts */,
+				C0387726220C3A1E00CE3C66 /* NewsFeed */,
+				C09BF4A821F8F84000FEA949 /* AppDelegate.swift */,
+				C0DDF0D12204D7AA0028A694 /* NewsViewController.swift */,
+				C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */,
+				C09BF4AC21F8F84000FEA949 /* Main.storyboard */,
+				C09BF4AF21F8F84200FEA949 /* Assets.xcassets */,
+				C09BF4B121F8F84200FEA949 /* LaunchScreen.storyboard */,
+				C09BF4B421F8F84200FEA949 /* Info.plist */,
+			);
+			path = LentaPlus;
+			sourceTree = "<group>";
+		};
+		E9EAE22E0E30AE1FD58FB862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0DDF0CF2204D1360028A694 /* PagingKit.framework */,
+				DDE3805A2AF9D0CE059960FC /* Pods_LentaPlus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C09BF4A421F8F84000FEA949 /* LentaPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C09BF4B721F8F84200FEA949 /* Build configuration list for PBXNativeTarget "LentaPlus" */;
+			buildPhases = (
+				6EB29D3553121279E9DF2D26 /* [CP] Check Pods Manifest.lock */,
+				C09BF4A121F8F84000FEA949 /* Sources */,
+				C09BF4A221F8F84000FEA949 /* Frameworks */,
+				C09BF4A321F8F84000FEA949 /* Resources */,
+				F24FA9B69D4E93A23E079D6B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LentaPlus;
+			productName = LentaPlus;
+			productReference = C09BF4A521F8F84000FEA949 /* LentaPlus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C09BF49D21F8F84000FEA949 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Alex Cord";
+				TargetAttributes = {
+					C09BF4A421F8F84000FEA949 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C09BF4A021F8F84000FEA949 /* Build configuration list for PBXProject "LentaPlus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C09BF49C21F8F84000FEA949;
+			productRefGroup = C09BF4A621F8F84000FEA949 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C09BF4A421F8F84000FEA949 /* LentaPlus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C09BF4A321F8F84000FEA949 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07627BF21F8FDEB00D9350A /* PT Root UI_Bold.ttf in Resources */,
+				C07627C021F8FDEB00D9350A /* PT Root UI_Light.ttf in Resources */,
+				C07627C121F8FDEB00D9350A /* PT Root UI_Medium.ttf in Resources */,
+				C07627C221F8FDEB00D9350A /* PT Root UI_Regular.ttf in Resources */,
+				C07627C321F8FDEB00D9350A /* MinionPro-Bold.otf in Resources */,
+				C07627C421F8FDEB00D9350A /* MinionPro-Regular.otf in Resources */,
+				C0387732220C90A400CE3C66 /* NewsFeedCell.xib in Resources */,
+				C09BF4B321F8F84200FEA949 /* LaunchScreen.storyboard in Resources */,
+				C09BF4B021F8F84200FEA949 /* Assets.xcassets in Resources */,
+				C09BF4AE21F8F84000FEA949 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EB29D3553121279E9DF2D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LentaPlus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F24FA9B69D4E93A23E079D6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LentaPlus/Pods-LentaPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LentaPlus/Pods-LentaPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C09BF4A121F8F84000FEA949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0E034212201A0D2005E69FD /* LentaModel.swift in Sources */,
+				C038772A220C7DA700CE3C66 /* TableViewController.swift in Sources */,
+				C0387728220C5D9000CE3C66 /* UIView+constraints.swift in Sources */,
+				C0AD03212211FDA8004B0594 /* ReadViewController.swift in Sources */,
+				C0387730220C8C9700CE3C66 /* NewsCellController.swift in Sources */,
+				C09BF4A921F8F84000FEA949 /* AppDelegate.swift in Sources */,
+				C0DDF0D22204D7AA0028A694 /* NewsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C09BF4AC21F8F84000FEA949 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C09BF4AD21F8F84000FEA949 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C09BF4B121F8F84200FEA949 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C09BF4B221F8F84200FEA949 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C09BF4B521F8F84200FEA949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C09BF4B621F8F84200FEA949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C09BF4B821F8F84200FEA949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005AD0D084F1040FAA8F240A /* Pods-LentaPlus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KY276FLS3;
+				INFOPLIST_FILE = LentaPlus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Accord.LentaPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C09BF4B921F8F84200FEA949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 033C3FCEAF0D3343EDB96CC7 /* Pods-LentaPlus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KY276FLS3;
+				INFOPLIST_FILE = LentaPlus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Accord.LentaPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C09BF4A021F8F84000FEA949 /* Build configuration list for PBXProject "LentaPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C09BF4B521F8F84200FEA949 /* Debug */,
+				C09BF4B621F8F84200FEA949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C09BF4B721F8F84200FEA949 /* Build configuration list for PBXNativeTarget "LentaPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C09BF4B821F8F84200FEA949 /* Debug */,
+				C09BF4B921F8F84200FEA949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C09BF49D21F8F84000FEA949 /* Project object */;
+}

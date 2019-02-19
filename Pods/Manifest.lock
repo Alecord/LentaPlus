@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (4.8.0)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - ImageSlideshow (1.7.0):
+    - ImageSlideshow/Core (= 1.7.0)
+  - ImageSlideshow/Core (1.7.0)
+  - ImageSlideshow/Kingfisher (1.7.0):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
+  - Kingfisher (5.0.1)
+  - ObjectMapper (3.4.2)
+  - Parchment (1.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8)
+  - AlamofireObjectMapper (~> 5.2)
+  - ImageSlideshow (~> 1.6)
+  - ImageSlideshow/Kingfisher
+  - Kingfisher (~> 5.0.1)
+  - ObjectMapper (~> 3.4)
+  - Parchment
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - ImageSlideshow
+    - Kingfisher
+    - ObjectMapper
+    - Parchment
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Parchment: 5a8c9c73549a6d73a7c1b606c27246910d2e5720
+
+PODFILE CHECKSUM: b3be27863370217863792173098b96e46741bb16
+
+COCOAPODS: 1.5.3

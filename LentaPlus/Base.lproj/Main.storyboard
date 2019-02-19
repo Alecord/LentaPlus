@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rF4-f0-Oh0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zTh-gt-5GY">
+            <objects>
+                <navigationController id="rF4-f0-Oh0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="GvK-bW-Nz3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MinionPro-Bold" family="Minion Pro" pointSize="20"/>
+                            <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ENb-a1-Z4i" kind="relationship" relationship="rootViewController" id="fiI-4g-xCX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vev-kH-R9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074.4000000000001" y="-233.43328335832086"/>
+        </scene>
+        <!--LENTA+-->
+        <scene sceneID="KLm-P4-QwM">
+            <objects>
+                <viewController id="ENb-a1-Z4i" customClass="NewsViewController" customModule="LentaPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7AA-NH-vD9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="df5-An-IMw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LENTA+" id="vkw-aL-JUx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0A-VX-Qmu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="-233"/>
+        </scene>
+        <!--Read View Controller-->
+        <scene sceneID="z7j-wJ-Oxx">
+            <objects>
+                <viewController id="Nly-3i-Cj4" customClass="ReadViewController" customModule="LentaPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RXD-q8-aJh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wng-jw-CIp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWj-9t-eL2" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="0el-ab-ldo"/>
+                                            <constraint firstAttribute="height" constant="250" id="umK-yp-rKS"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-MV-Zn9">
+                                        <rect key="frame" x="15" y="258" width="345" height="28"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="PTSerif-Caption"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBk-gD-krq">
+                                        <rect key="frame" x="15" y="294" width="345" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="iSr-4R-7J9"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Власти Великобритании считают, что установили все детали покушения в Солсбери на бывшего офицера российской военной разведки Сергея Скрипаля, сообщает The Telegraph со ссылкой на источники в правительстве.</string>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="14" name="PTSerif-Caption"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">Власти Великобритании считают, что установили все детали покушения в Солсбери на бывшего офицера российской военной разведки Сергея Скрипаля, сообщает The Telegraph со ссылкой на источники в правительстве.  По их сведениям, власти уверены, что знают «все, что необходимо знать» об отравлении экс-полковника Главного управления (более известно как ГРУ) российского Генштаба. В заметке говорится, что британской стороне хорошо известна вся цепочка людей, ответственных за инцидент в Солсбери. Она, как утверждают собеседники газеты, ведет к высшему российскому руководству.   Источники также сообщили изданию, что правительство Великобритании считает разгромленной агентурную сеть ГРУ на территории страны, но теперь опасается действий со стороны Службы внешней разведки (СВР) России. В Лондоне полагают, что СВР, преемница Первого главного управления КГБ СССР, опаснее и профессиональнее ГРУ и поэтому представляет большую угрозу, чем военная разведка.  МАТЕРИАЛЫ ПО ТЕМЕ 00:02 — 24 декабря 2018  Ким, санкции и Солсберецкий шпиль Что пережил мир в 2018 году Данные материалы появились на фоне сведений о том, что покушение на Скрипаля и дальнейшая информационная кампания на эту тему готовились различными британскими структурами с 2015 года.  Скрипаль, завербованный западными спецслужбами в 1990-х годах, и его дочь Юлия были найдены в бессознательном состоянии в сквере в Солсбери 4 марта. Британские власти заявили, что за покушением стоит Россия — Скрипали были отравлены разработанным в СССР нервно-паралитическим веществом класса «Новичок». Лондон назвал имена и показал фотографии обвиняемых — Александра Петрова и Руслана Боширова, которые, по утверждению Британии, работают на ГРУ. Через несколько дней Петров и Боширов дали интервью главному редактору телеканала RT Маргарите Симоньян, в котором заявили, что не имеют отношения к разведке, а в Британию приехали, чтобы «оторваться».  Позже Bellingcat и The Insider опубликовали расследования, в которых утверждали, что Петров и Боширов действительно работают на ГРУ, а их настоящие имена — Александр Мишкин и Анатолий Чепига соответственно. Боширов-Чепига, по информации журналистов, имеет звание Героя России.  Москва неоднократно отрицала любую причастность к покушению на Скрипалей, а также на высшем уровне заявляла, что Петров и Боширов не имеют отношения к спецслужбам или криминалу.</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3A-ip-bbN">
+                                        <rect key="frame" x="15" y="412" width="345" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="jKn-Ub-GW0"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="PTSerif-Caption"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mPc-MV-Zn9" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" constant="15" id="Cu9-Kl-8Gk"/>
+                                    <constraint firstItem="E3A-ip-bbN" firstAttribute="top" secondItem="pBk-gD-krq" secondAttribute="bottom" constant="20" id="Fs7-KW-kO6"/>
+                                    <constraint firstAttribute="trailing" secondItem="mPc-MV-Zn9" secondAttribute="trailing" constant="15" id="LG0-ls-oWy"/>
+                                    <constraint firstItem="gWj-9t-eL2" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" id="MFF-HT-7EE"/>
+                                    <constraint firstAttribute="bottom" secondItem="E3A-ip-bbN" secondAttribute="bottom" constant="20" id="SIP-m6-Ec7"/>
+                                    <constraint firstItem="gWj-9t-eL2" firstAttribute="top" secondItem="wng-jw-CIp" secondAttribute="top" id="TQY-Rg-Kxt"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pBk-gD-krq" secondAttribute="trailing" constant="15" id="VWA-MK-Li0"/>
+                                    <constraint firstAttribute="trailing" secondItem="gWj-9t-eL2" secondAttribute="trailing" id="Y4p-wy-xIt"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E3A-ip-bbN" secondAttribute="trailing" constant="15" id="cFG-PZ-f7l"/>
+                                    <constraint firstItem="pBk-gD-krq" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" constant="15" id="fN0-Kp-I1l"/>
+                                    <constraint firstItem="E3A-ip-bbN" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" constant="15" id="g5A-dy-khq"/>
+                                    <constraint firstItem="mPc-MV-Zn9" firstAttribute="top" secondItem="gWj-9t-eL2" secondAttribute="bottom" constant="8" id="t2X-ip-auC"/>
+                                    <constraint firstItem="pBk-gD-krq" firstAttribute="top" secondItem="mPc-MV-Zn9" secondAttribute="bottom" constant="8" id="xQb-Iz-BVH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E3A-ip-bbN" firstAttribute="width" secondItem="RXD-q8-aJh" secondAttribute="width" constant="-30" id="0CR-2n-9MO"/>
+                            <constraint firstItem="pBk-gD-krq" firstAttribute="width" secondItem="RXD-q8-aJh" secondAttribute="width" constant="-30" id="20I-8a-elz"/>
+                            <constraint firstItem="xcx-kc-tCL" firstAttribute="trailing" secondItem="wng-jw-CIp" secondAttribute="trailing" id="5uG-Zh-Nqr"/>
+                            <constraint firstItem="wng-jw-CIp" firstAttribute="bottom" secondItem="xcx-kc-tCL" secondAttribute="bottom" id="8sL-Jw-gPe"/>
+                            <constraint firstItem="wng-jw-CIp" firstAttribute="top" secondItem="xcx-kc-tCL" secondAttribute="top" id="L9z-kX-Lzf"/>
+                            <constraint firstItem="mPc-MV-Zn9" firstAttribute="width" secondItem="RXD-q8-aJh" secondAttribute="width" constant="-30" id="RVj-U0-D6B"/>
+                            <constraint firstItem="wng-jw-CIp" firstAttribute="leading" secondItem="xcx-kc-tCL" secondAttribute="leading" id="aka-Vf-m3x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xcx-kc-tCL"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="descriptionAlbum" destination="pBk-gD-krq" id="wd2-qh-Qzr"/>
+                        <outlet property="slideshow" destination="gWj-9t-eL2" id="0sB-Le-yPD"/>
+                        <outlet property="titleAlbum" destination="mPc-MV-Zn9" id="qnT-1H-CVd"/>
+                        <outlet property="urlAlbum" destination="E3A-ip-bbN" id="sUc-93-2U6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1YE-fe-sTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="366"/>
+        </scene>
+    </scenes>
+</document>
