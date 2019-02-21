@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PT Root UI_Bold.ttf">
+            <string>PTRootUI-Bold</string>
+        </array>
+        <array key="PT Root UI_Regular.ttf">
+            <string>PTRootUI-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="zTh-gt-5GY">
@@ -20,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="MinionPro-Bold" family="Minion Pro" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="PTRootUI-Bold" family="PT Root UI" pointSize="20"/>
                             <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -52,89 +60,82 @@
         <!--Read View Controller-->
         <scene sceneID="z7j-wJ-Oxx">
             <objects>
-                <viewController id="Nly-3i-Cj4" customClass="ReadViewController" customModule="LentaPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newsView" id="Nly-3i-Cj4" customClass="ReadViewController" customModule="LentaPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RXD-q8-aJh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wng-jw-CIp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="780"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWj-9t-eL2" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="0el-ab-ldo"/>
-                                            <constraint firstAttribute="height" constant="250" id="umK-yp-rKS"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="0el-ab-ldo"/>
+                                            <constraint firstAttribute="height" constant="250" identifier="imageSlideshowHeightConstraint" id="DxF-3r-VQf"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-MV-Zn9">
-                                        <rect key="frame" x="15" y="258" width="345" height="28"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Label">
-                                                <attributes>
-                                                    <font key="NSFont" size="24" name="PTSerif-Caption"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-MV-Zn9">
+                                        <rect key="frame" x="15" y="258" width="345" height="25.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ASv-S3-i32"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PTRootUI-Bold" family="PT Root UI" pointSize="20"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBk-gD-krq">
-                                        <rect key="frame" x="15" y="294" width="345" height="98"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="8mn-RS-OZj">
+                                        <rect key="frame" x="99" y="304" width="5" height="5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 мин назад" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z39-3q-pqe">
+                                        <rect key="frame" x="15" y="298.5" width="74" height="16"/>
+                                        <fontDescription key="fontDescription" name="PTRootUI-Regular" family="PT Root UI" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Культура" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-er-X8F">
+                                        <rect key="frame" x="114" y="298.5" width="50" height="16"/>
+                                        <fontDescription key="fontDescription" name="PTRootUI-Regular" family="PT Root UI" pointSize="12"/>
+                                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBk-gD-krq">
+                                        <rect key="frame" x="15" y="324.5" width="345" height="136.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" id="iSr-4R-7J9"/>
                                         </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Власти Великобритании считают, что установили все детали покушения в Солсбери на бывшего офицера российской военной разведки Сергея Скрипаля, сообщает The Telegraph со ссылкой на источники в правительстве.</string>
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="PTSerif-Caption"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <string key="text">Власти Великобритании считают, что установили все детали покушения в Солсбери на бывшего офицера российской военной разведки Сергея Скрипаля, сообщает The Telegraph со ссылкой на источники в правительстве.</string>
+                                        <fontDescription key="fontDescription" name="PTRootUI-Regular" family="PT Root UI" pointSize="18"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                         <string key="userLabel">Власти Великобритании считают, что установили все детали покушения в Солсбери на бывшего офицера российской военной разведки Сергея Скрипаля, сообщает The Telegraph со ссылкой на источники в правительстве.  По их сведениям, власти уверены, что знают «все, что необходимо знать» об отравлении экс-полковника Главного управления (более известно как ГРУ) российского Генштаба. В заметке говорится, что британской стороне хорошо известна вся цепочка людей, ответственных за инцидент в Солсбери. Она, как утверждают собеседники газеты, ведет к высшему российскому руководству.   Источники также сообщили изданию, что правительство Великобритании считает разгромленной агентурную сеть ГРУ на территории страны, но теперь опасается действий со стороны Службы внешней разведки (СВР) России. В Лондоне полагают, что СВР, преемница Первого главного управления КГБ СССР, опаснее и профессиональнее ГРУ и поэтому представляет большую угрозу, чем военная разведка.  МАТЕРИАЛЫ ПО ТЕМЕ 00:02 — 24 декабря 2018  Ким, санкции и Солсберецкий шпиль Что пережил мир в 2018 году Данные материалы появились на фоне сведений о том, что покушение на Скрипаля и дальнейшая информационная кампания на эту тему готовились различными британскими структурами с 2015 года.  Скрипаль, завербованный западными спецслужбами в 1990-х годах, и его дочь Юлия были найдены в бессознательном состоянии в сквере в Солсбери 4 марта. Британские власти заявили, что за покушением стоит Россия — Скрипали были отравлены разработанным в СССР нервно-паралитическим веществом класса «Новичок». Лондон назвал имена и показал фотографии обвиняемых — Александра Петрова и Руслана Боширова, которые, по утверждению Британии, работают на ГРУ. Через несколько дней Петров и Боширов дали интервью главному редактору телеканала RT Маргарите Симоньян, в котором заявили, что не имеют отношения к разведке, а в Британию приехали, чтобы «оторваться».  Позже Bellingcat и The Insider опубликовали расследования, в которых утверждали, что Петров и Боширов действительно работают на ГРУ, а их настоящие имена — Александр Мишкин и Анатолий Чепига соответственно. Боширов-Чепига, по информации журналистов, имеет звание Героя России.  Москва неоднократно отрицала любую причастность к покушению на Скрипалей, а также на высшем уровне заявляла, что Петров и Боширов не имеют отношения к спецслужбам или криминалу.</string>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3A-ip-bbN">
-                                        <rect key="frame" x="15" y="412" width="345" height="17"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="jKn-Ub-GW0"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Label">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="PTSerif-Caption"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="mPc-MV-Zn9" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" constant="15" id="Cu9-Kl-8Gk"/>
-                                    <constraint firstItem="E3A-ip-bbN" firstAttribute="top" secondItem="pBk-gD-krq" secondAttribute="bottom" constant="20" id="Fs7-KW-kO6"/>
                                     <constraint firstAttribute="trailing" secondItem="mPc-MV-Zn9" secondAttribute="trailing" constant="15" id="LG0-ls-oWy"/>
                                     <constraint firstItem="gWj-9t-eL2" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" id="MFF-HT-7EE"/>
-                                    <constraint firstAttribute="bottom" secondItem="E3A-ip-bbN" secondAttribute="bottom" constant="20" id="SIP-m6-Ec7"/>
+                                    <constraint firstItem="Z39-3q-pqe" firstAttribute="top" secondItem="mPc-MV-Zn9" secondAttribute="bottom" constant="15" id="QZ3-0u-ELR"/>
                                     <constraint firstItem="gWj-9t-eL2" firstAttribute="top" secondItem="wng-jw-CIp" secondAttribute="top" id="TQY-Rg-Kxt"/>
+                                    <constraint firstItem="pBk-gD-krq" firstAttribute="top" secondItem="Z39-3q-pqe" secondAttribute="bottom" constant="10" id="VNz-3M-IsV"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pBk-gD-krq" secondAttribute="trailing" constant="15" id="VWA-MK-Li0"/>
+                                    <constraint firstItem="8mn-RS-OZj" firstAttribute="centerY" secondItem="Z39-3q-pqe" secondAttribute="centerY" id="XRz-oW-B51"/>
                                     <constraint firstAttribute="trailing" secondItem="gWj-9t-eL2" secondAttribute="trailing" id="Y4p-wy-xIt"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E3A-ip-bbN" secondAttribute="trailing" constant="15" id="cFG-PZ-f7l"/>
+                                    <constraint firstItem="hhg-er-X8F" firstAttribute="baseline" secondItem="Z39-3q-pqe" secondAttribute="baseline" id="Ysg-Z1-wKN"/>
+                                    <constraint firstItem="8mn-RS-OZj" firstAttribute="leading" secondItem="Z39-3q-pqe" secondAttribute="trailing" constant="10" id="aIU-XM-fe5"/>
                                     <constraint firstItem="pBk-gD-krq" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" constant="15" id="fN0-Kp-I1l"/>
-                                    <constraint firstItem="E3A-ip-bbN" firstAttribute="leading" secondItem="wng-jw-CIp" secondAttribute="leading" constant="15" id="g5A-dy-khq"/>
+                                    <constraint firstItem="Z39-3q-pqe" firstAttribute="leading" secondItem="mPc-MV-Zn9" secondAttribute="leading" id="iN8-QT-BVt"/>
                                     <constraint firstItem="mPc-MV-Zn9" firstAttribute="top" secondItem="gWj-9t-eL2" secondAttribute="bottom" constant="8" id="t2X-ip-auC"/>
-                                    <constraint firstItem="pBk-gD-krq" firstAttribute="top" secondItem="mPc-MV-Zn9" secondAttribute="bottom" constant="8" id="xQb-Iz-BVH"/>
+                                    <constraint firstAttribute="bottom" secondItem="pBk-gD-krq" secondAttribute="bottom" constant="15" id="te4-fz-E3E"/>
+                                    <constraint firstItem="hhg-er-X8F" firstAttribute="leading" secondItem="8mn-RS-OZj" secondAttribute="trailing" constant="10" id="urx-EP-RfU"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hhg-er-X8F" secondAttribute="trailing" constant="20" symbolic="YES" id="w8P-eG-MRY"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="E3A-ip-bbN" firstAttribute="width" secondItem="RXD-q8-aJh" secondAttribute="width" constant="-30" id="0CR-2n-9MO"/>
                             <constraint firstItem="pBk-gD-krq" firstAttribute="width" secondItem="RXD-q8-aJh" secondAttribute="width" constant="-30" id="20I-8a-elz"/>
                             <constraint firstItem="xcx-kc-tCL" firstAttribute="trailing" secondItem="wng-jw-CIp" secondAttribute="trailing" id="5uG-Zh-Nqr"/>
                             <constraint firstItem="wng-jw-CIp" firstAttribute="bottom" secondItem="xcx-kc-tCL" secondAttribute="bottom" id="8sL-Jw-gPe"/>
@@ -144,17 +145,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xcx-kc-tCL"/>
                     </view>
-                    <size key="freeformSize" width="375" height="2000"/>
+                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
-                        <outlet property="descriptionAlbum" destination="pBk-gD-krq" id="wd2-qh-Qzr"/>
-                        <outlet property="slideshow" destination="gWj-9t-eL2" id="0sB-Le-yPD"/>
-                        <outlet property="titleAlbum" destination="mPc-MV-Zn9" id="qnT-1H-CVd"/>
-                        <outlet property="urlAlbum" destination="E3A-ip-bbN" id="sUc-93-2U6"/>
+                        <outlet property="dateNews" destination="Z39-3q-pqe" id="OvM-bc-zIv"/>
+                        <outlet property="heightConstraint" destination="DxF-3r-VQf" id="ibB-7w-ah9"/>
+                        <outlet property="imageSlideshow" destination="gWj-9t-eL2" id="SnT-hn-8oH"/>
+                        <outlet property="myView" destination="RXD-q8-aJh" id="uPk-m4-4us"/>
+                        <outlet property="rubricNews" destination="hhg-er-X8F" id="hNr-19-JOp"/>
+                        <outlet property="textNews" destination="pBk-gD-krq" id="dNv-Zx-bZH"/>
+                        <outlet property="titleNews" destination="mPc-MV-Zn9" id="pt2-5f-Yqu"/>
+                        <outlet property="view" destination="RXD-q8-aJh" id="Tci-c4-EVQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YE-fe-sTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="366"/>
+            <point key="canvasLocation" x="1028" y="-234"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Circle" width="5" height="5"/>
+    </resources>
 </document>

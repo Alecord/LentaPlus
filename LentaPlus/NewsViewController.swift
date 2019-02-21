@@ -81,8 +81,9 @@ class NewsViewController: UIViewController, TableViewDelegate {
 
         // Customize the menu styling.
         pagingViewController.textColor = .black
-        pagingViewController.font = UIFont(name: "PTRootUI-Regular", size: 14) ?? UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
-        pagingViewController.selectedFont = UIFont(name: "PTRootUI-Regular", size: 14) ?? UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
+        let ptFont = UIFont(name: "PTRootUI-Regular", size: 14) ?? UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
+        pagingViewController.font = ptFont
+        pagingViewController.selectedFont = ptFont
         pagingViewController.selectedTextColor = UIColor.secondColor
         pagingViewController.indicatorColor = UIColor.secondColor
         pagingViewController.indicatorOptions = .visible(
@@ -109,8 +110,8 @@ class NewsViewController: UIViewController, TableViewDelegate {
     
     func removeNavBarBorder() -> Void {
         if barStatus != 0 {
-            let upperTitle = NSMutableAttributedString(string: "LENTA", attributes: [NSAttributedString.Key.font: UIFont(name: "MinionPro-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.black])
-            let upperTitlePlus = NSMutableAttributedString(string: "+", attributes: [NSAttributedString.Key.font: UIFont(name: "MinionPro-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.secondColor])
+            let upperTitle = NSMutableAttributedString(string: "LENTA", attributes: [NSAttributedString.Key.font: UIFont(name: "PTRootUI-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.black])
+            let upperTitlePlus = NSMutableAttributedString(string: "+", attributes: [NSAttributedString.Key.font: UIFont(name: "PTRootUI-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.secondColor])
             upperTitle.append(upperTitlePlus)
             let label1 = UILabel(frame: CGRect(x: 0, y: 0, width: 400, height:44))
             label1.numberOfLines = 0
@@ -132,8 +133,8 @@ class NewsViewController: UIViewController, TableViewDelegate {
     
     func restoreNavBarBorder() -> Void {
         if barStatus != 1 {
-            let upperTitle = NSMutableAttributedString(string: "LENTA", attributes: [NSAttributedString.Key.font: UIFont(name: "MinionPro-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white])
-            let upperTitlePlus = NSMutableAttributedString(string: "+", attributes: [NSAttributedString.Key.font: UIFont(name: "MinionPro-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.secondColor])
+            let upperTitle = NSMutableAttributedString(string: "LENTA", attributes: [NSAttributedString.Key.font: UIFont(name: "PTRootUI-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white])
+            let upperTitlePlus = NSMutableAttributedString(string: "+", attributes: [NSAttributedString.Key.font: UIFont(name: "PTRootUI-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white])
             let lowerTitle = NSMutableAttributedString(string: "\n\(items[selectedItemIndex].title)", attributes: [NSAttributedString.Key.font: UIFont(name: "PTRootUI-Light", size: 12)! , NSAttributedString.Key.foregroundColor: UIColor(hue: 0, saturation: 0, brightness: 91, alpha: 1)])
             upperTitle.append(upperTitlePlus)
             upperTitle.append(lowerTitle)
@@ -181,7 +182,10 @@ class NewsViewController: UIViewController, TableViewDelegate {
         }
     }
     
-    func selectRow(indexPath: IndexPath) {
+    func selectRow(newsForRead: FeedResponse) {
+        print(newsForRead)
+        // segueToNewsView
+        
     }
     
 }
@@ -199,7 +203,6 @@ extension NewsViewController: PagingViewControllerDataSource {
         
         // Set delegate so that we can listen to scroll events.
         //viewController.tableView.delegate = self
-        
         // Set custom delegate
         viewController.delegate = self
         

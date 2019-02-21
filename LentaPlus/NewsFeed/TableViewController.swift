@@ -6,7 +6,7 @@ import AlamofireObjectMapper
 
 protocol TableViewDelegate: class {
     func scrollView(_ scrollView: UIScrollView)
-    func selectRow(indexPath: IndexPath)
+    func selectRow(newsForRead: FeedResponse)
 }
 
 class TableViewController: UITableViewController {
@@ -98,14 +98,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(newsFeed[indexPath.row].infoId as! String )
-        delegate?.selectRow(indexPath: indexPath)
+        //delegate?.selectRow(newsForRead: newsFeed[indexPath.row])
+        let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newsView") as! ReadViewController
+        newsVC.newsFeed = newsFeed[indexPath.row]
+        self.navigationController?.pushViewController(newsVC, animated: true)
+
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.scrollView(scrollView)
     }
-    
     
     func getLatestList() -> Void {
         print("new data")

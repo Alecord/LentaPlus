@@ -24,6 +24,9 @@ class NewsCellController: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+        //let bgColorView = UIView()
+        //bgColorView.backgroundColor =  .red
+        //self.selectedBackgroundView = bgColorView
         // Configure the view for the selected state
     }
 

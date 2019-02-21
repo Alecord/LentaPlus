@@ -16,8 +16,6 @@
 		C07627C021F8FDEB00D9350A /* PT Root UI_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */; };
 		C07627C121F8FDEB00D9350A /* PT Root UI_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */; };
 		C07627C221F8FDEB00D9350A /* PT Root UI_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */; };
-		C07627C321F8FDEB00D9350A /* MinionPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C07627B921F8FD5F00D9350A /* MinionPro-Bold.otf */; };
-		C07627C421F8FDEB00D9350A /* MinionPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BA21F8FD5F00D9350A /* MinionPro-Regular.otf */; };
 		C09BF4A921F8F84000FEA949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF4A821F8F84000FEA949 /* AppDelegate.swift */; };
 		C09BF4AE21F8F84000FEA949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4AC21F8F84000FEA949 /* Main.storyboard */; };
 		C09BF4B021F8F84200FEA949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4AF21F8F84200FEA949 /* Assets.xcassets */; };
@@ -34,8 +32,6 @@
 		C0387729220C7DA700CE3C66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C038772F220C8C9700CE3C66 /* NewsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellController.swift; sourceTree = "<group>"; };
 		C0387731220C90A400CE3C66 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
-		C07627B921F8FD5F00D9350A /* MinionPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MinionPro-Bold.otf"; sourceTree = "<group>"; };
-		C07627BA21F8FD5F00D9350A /* MinionPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MinionPro-Regular.otf"; sourceTree = "<group>"; };
 		C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Light.ttf"; sourceTree = "<group>"; };
 		C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Medium.ttf"; sourceTree = "<group>"; };
 		C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Regular.ttf"; sourceTree = "<group>"; };
@@ -78,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				C0E034202201A0D2005E69FD /* LentaModel.swift */,
-				C0387729220C7DA700CE3C66 /* TableViewController.swift */,
 				C038772F220C8C9700CE3C66 /* NewsCellController.swift */,
+				C0387729220C7DA700CE3C66 /* TableViewController.swift */,
 				C0AD03202211FDA8004B0594 /* ReadViewController.swift */,
 				C0387731220C90A400CE3C66 /* NewsFeedCell.xib */,
 			);
@@ -93,8 +89,6 @@
 				C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */,
 				C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */,
 				C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */,
-				C07627B921F8FD5F00D9350A /* MinionPro-Bold.otf */,
-				C07627BA21F8FD5F00D9350A /* MinionPro-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -206,8 +200,6 @@
 				C07627C021F8FDEB00D9350A /* PT Root UI_Light.ttf in Resources */,
 				C07627C121F8FDEB00D9350A /* PT Root UI_Medium.ttf in Resources */,
 				C07627C221F8FDEB00D9350A /* PT Root UI_Regular.ttf in Resources */,
-				C07627C321F8FDEB00D9350A /* MinionPro-Bold.otf in Resources */,
-				C07627C421F8FDEB00D9350A /* MinionPro-Regular.otf in Resources */,
 				C0387732220C90A400CE3C66 /* NewsFeedCell.xib in Resources */,
 				C09BF4B321F8F84200FEA949 /* LaunchScreen.storyboard in Resources */,
 				C09BF4B021F8F84200FEA949 /* Assets.xcassets in Resources */,
@@ -435,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KY276FLS3;
 				INFOPLIST_FILE = LentaPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KY276FLS3;
 				INFOPLIST_FILE = LentaPlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
