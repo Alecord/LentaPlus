@@ -214,3 +214,4 @@ class FeedImage: Mappable {
         caption <- map["caption"]
     }
 }
+

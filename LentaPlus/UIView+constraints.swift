@@ -2,6 +2,7 @@ import UIKit
 
 extension UIColor {
     static let secondColor = UIColor(hue: 349, saturation: 82, brightness: 100, alpha: 1)
+    static let grayedColor = UIColor(hue: 0, saturation: 0, brightness: 30, alpha: 1)
 }
 
 extension UIView {

@@ -12,6 +12,8 @@ PODS:
   - Kingfisher (5.0.1)
   - ObjectMapper (3.4.2)
   - Parchment (1.5.0)
+  - SnapKit (4.0.1)
+  - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8)
@@ -21,6 +23,8 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0.1)
   - ObjectMapper (~> 3.4)
   - Parchment
+  - SnapKit (~> 4.0.0)
+  - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -30,6 +34,8 @@ SPEC REPOS:
     - Kingfisher
     - ObjectMapper
     - Parchment
+    - SnapKit
+    - SwiftSoup
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
@@ -38,7 +44,9 @@ SPEC CHECKSUMS:
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Parchment: 5a8c9c73549a6d73a7c1b606c27246910d2e5720
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: b3be27863370217863792173098b96e46741bb16
+PODFILE CHECKSUM: de11dc62050ec1b5d9f93f87d2d697747c323fb9
 
 COCOAPODS: 1.5.3

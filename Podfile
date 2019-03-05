@@ -10,4 +10,6 @@ pod 'Kingfisher', '~> 5.0.1'
 pod 'ImageSlideshow', '~> 1.6'
 pod 'ImageSlideshow/Kingfisher'
 pod 'Parchment'
+pod 'SnapKit', '~> 4.0.0'
+pod 'SwiftSoup'
 end

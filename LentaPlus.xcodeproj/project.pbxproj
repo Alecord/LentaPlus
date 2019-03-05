@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A26567E3B15256AB8E4FEA89 /* Pods_LentaPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE3805A2AF9D0CE059960FC /* Pods_LentaPlus.framework */; };
+		C012776D2228041900D02413 /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C012776C2228041900D02413 /* StretchyViewController.swift */; };
 		C0387728220C5D9000CE3C66 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */; };
 		C038772A220C7DA700CE3C66 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0387729220C7DA700CE3C66 /* TableViewController.swift */; };
 		C0387730220C8C9700CE3C66 /* NewsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038772F220C8C9700CE3C66 /* NewsCellController.swift */; };
@@ -16,18 +17,30 @@
 		C07627C021F8FDEB00D9350A /* PT Root UI_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */; };
 		C07627C121F8FDEB00D9350A /* PT Root UI_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */; };
 		C07627C221F8FDEB00D9350A /* PT Root UI_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */; };
+		C080F4E222293E7100AACB27 /* Body+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080F4E022293E7100AACB27 /* Body+CoreDataClass.swift */; };
+		C080F4E322293E7100AACB27 /* Body+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080F4E122293E7100AACB27 /* Body+CoreDataProperties.swift */; };
 		C09BF4A921F8F84000FEA949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09BF4A821F8F84000FEA949 /* AppDelegate.swift */; };
 		C09BF4AE21F8F84000FEA949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4AC21F8F84000FEA949 /* Main.storyboard */; };
 		C09BF4B021F8F84200FEA949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4AF21F8F84200FEA949 /* Assets.xcassets */; };
 		C09BF4B321F8F84200FEA949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09BF4B121F8F84200FEA949 /* LaunchScreen.storyboard */; };
-		C0AD03212211FDA8004B0594 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD03202211FDA8004B0594 /* ReadViewController.swift */; };
+		C0D8488C2222DC85002B4FAE /* LentaPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0EC513C2222A6E00017BB41 /* LentaPlus.xcdatamodeld */; };
 		C0DDF0D22204D7AA0028A694 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDF0D12204D7AA0028A694 /* NewsViewController.swift */; };
 		C0E034212201A0D2005E69FD /* LentaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E034202201A0D2005E69FD /* LentaModel.swift */; };
+		C0EC51472222A7720017BB41 /* Rubric+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC513F2222A7720017BB41 /* Rubric+CoreDataClass.swift */; };
+		C0EC51482222A7720017BB41 /* Rubric+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51402222A7720017BB41 /* Rubric+CoreDataProperties.swift */; };
+		C0EC51492222A7720017BB41 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51412222A7720017BB41 /* Image+CoreDataClass.swift */; };
+		C0EC514A2222A7720017BB41 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51422222A7720017BB41 /* Image+CoreDataProperties.swift */; };
+		C0EC514B2222A7720017BB41 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51432222A7720017BB41 /* Tag+CoreDataClass.swift */; };
+		C0EC514C2222A7720017BB41 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51442222A7720017BB41 /* Tag+CoreDataProperties.swift */; };
+		C0EC514D2222A7720017BB41 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51452222A7720017BB41 /* News+CoreDataClass.swift */; };
+		C0EC514E2222A7720017BB41 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC51462222A7720017BB41 /* News+CoreDataProperties.swift */; };
+		C0EC51502222A7A90017BB41 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC514F2222A7A90017BB41 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		005AD0D084F1040FAA8F240A /* Pods-LentaPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaPlus/Pods-LentaPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		033C3FCEAF0D3343EDB96CC7 /* Pods-LentaPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-LentaPlus/Pods-LentaPlus.release.xcconfig"; sourceTree = "<group>"; };
+		C012776C2228041900D02413 /* StretchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		C0387729220C7DA700CE3C66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C038772F220C8C9700CE3C66 /* NewsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellController.swift; sourceTree = "<group>"; };
@@ -36,16 +49,27 @@
 		C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Medium.ttf"; sourceTree = "<group>"; };
 		C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Regular.ttf"; sourceTree = "<group>"; };
 		C07627BE21F8FD9900D9350A /* PT Root UI_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Bold.ttf"; sourceTree = "<group>"; };
+		C080F4E022293E7100AACB27 /* Body+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Body+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C080F4E122293E7100AACB27 /* Body+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Body+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C09BF4A521F8F84000FEA949 /* LentaPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LentaPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09BF4A821F8F84000FEA949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09BF4AD21F8F84000FEA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C09BF4AF21F8F84200FEA949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C09BF4B221F8F84200FEA949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C09BF4B421F8F84200FEA949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0AD03202211FDA8004B0594 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		C0DDF0CF2204D1360028A694 /* PagingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PagingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DDF0D12204D7AA0028A694 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C0E034202201A0D2005E69FD /* LentaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaModel.swift; sourceTree = "<group>"; };
+		C0EC513D2222A6E00017BB41 /* LentaPlus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LentaPlus.xcdatamodel; sourceTree = "<group>"; };
+		C0EC513F2222A7720017BB41 /* Rubric+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rubric+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C0EC51402222A7720017BB41 /* Rubric+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rubric+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0EC51412222A7720017BB41 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C0EC51422222A7720017BB41 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0EC51432222A7720017BB41 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C0EC51442222A7720017BB41 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0EC51452222A7720017BB41 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C0EC51462222A7720017BB41 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "News+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0EC514F2222A7A90017BB41 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DDE3805A2AF9D0CE059960FC /* Pods_LentaPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LentaPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,9 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				C0E034202201A0D2005E69FD /* LentaModel.swift */,
+				C012776C2228041900D02413 /* StretchyViewController.swift */,
 				C038772F220C8C9700CE3C66 /* NewsCellController.swift */,
 				C0387729220C7DA700CE3C66 /* TableViewController.swift */,
-				C0AD03202211FDA8004B0594 /* ReadViewController.swift */,
 				C0387731220C90A400CE3C66 /* NewsFeedCell.xib */,
 			);
 			path = NewsFeed;
@@ -115,16 +139,36 @@
 			isa = PBXGroup;
 			children = (
 				C07627B821F8FA3100D9350A /* Fonts */,
+				C0EC51192222957E0017BB41 /* CoreData */,
 				C0387726220C3A1E00CE3C66 /* NewsFeed */,
-				C09BF4A821F8F84000FEA949 /* AppDelegate.swift */,
 				C0DDF0D12204D7AA0028A694 /* NewsViewController.swift */,
 				C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */,
+				C09BF4A821F8F84000FEA949 /* AppDelegate.swift */,
 				C09BF4AC21F8F84000FEA949 /* Main.storyboard */,
 				C09BF4AF21F8F84200FEA949 /* Assets.xcassets */,
 				C09BF4B121F8F84200FEA949 /* LaunchScreen.storyboard */,
 				C09BF4B421F8F84200FEA949 /* Info.plist */,
+				C0EC513C2222A6E00017BB41 /* LentaPlus.xcdatamodeld */,
 			);
 			path = LentaPlus;
+			sourceTree = "<group>";
+		};
+		C0EC51192222957E0017BB41 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC514F2222A7A90017BB41 /* CoreDataManager.swift */,
+				C080F4E022293E7100AACB27 /* Body+CoreDataClass.swift */,
+				C080F4E122293E7100AACB27 /* Body+CoreDataProperties.swift */,
+				C0EC513F2222A7720017BB41 /* Rubric+CoreDataClass.swift */,
+				C0EC51402222A7720017BB41 /* Rubric+CoreDataProperties.swift */,
+				C0EC51412222A7720017BB41 /* Image+CoreDataClass.swift */,
+				C0EC51422222A7720017BB41 /* Image+CoreDataProperties.swift */,
+				C0EC51432222A7720017BB41 /* Tag+CoreDataClass.swift */,
+				C0EC51442222A7720017BB41 /* Tag+CoreDataProperties.swift */,
+				C0EC51452222A7720017BB41 /* News+CoreDataClass.swift */,
+				C0EC51462222A7720017BB41 /* News+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		E9EAE22E0E30AE1FD58FB862 /* Frameworks */ = {
@@ -247,6 +291,8 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -258,6 +304,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -271,11 +319,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D8488C2222DC85002B4FAE /* LentaPlus.xcdatamodeld in Sources */,
+				C0EC514E2222A7720017BB41 /* News+CoreDataProperties.swift in Sources */,
 				C0E034212201A0D2005E69FD /* LentaModel.swift in Sources */,
 				C038772A220C7DA700CE3C66 /* TableViewController.swift in Sources */,
+				C012776D2228041900D02413 /* StretchyViewController.swift in Sources */,
+				C080F4E322293E7100AACB27 /* Body+CoreDataProperties.swift in Sources */,
+				C0EC514D2222A7720017BB41 /* News+CoreDataClass.swift in Sources */,
+				C0EC51502222A7A90017BB41 /* CoreDataManager.swift in Sources */,
 				C0387728220C5D9000CE3C66 /* UIView+constraints.swift in Sources */,
-				C0AD03212211FDA8004B0594 /* ReadViewController.swift in Sources */,
+				C0EC514A2222A7720017BB41 /* Image+CoreDataProperties.swift in Sources */,
+				C0EC514C2222A7720017BB41 /* Tag+CoreDataProperties.swift in Sources */,
+				C0EC51472222A7720017BB41 /* Rubric+CoreDataClass.swift in Sources */,
+				C0EC51492222A7720017BB41 /* Image+CoreDataClass.swift in Sources */,
+				C080F4E222293E7100AACB27 /* Body+CoreDataClass.swift in Sources */,
 				C0387730220C8C9700CE3C66 /* NewsCellController.swift in Sources */,
+				C0EC514B2222A7720017BB41 /* Tag+CoreDataClass.swift in Sources */,
+				C0EC51482222A7720017BB41 /* Rubric+CoreDataProperties.swift in Sources */,
 				C09BF4A921F8F84000FEA949 /* AppDelegate.swift in Sources */,
 				C0DDF0D22204D7AA0028A694 /* NewsViewController.swift in Sources */,
 			);
@@ -481,6 +541,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C0EC513C2222A6E00017BB41 /* LentaPlus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0EC513D2222A6E00017BB41 /* LentaPlus.xcdatamodel */,
+			);
+			currentVersion = C0EC513D2222A6E00017BB41 /* LentaPlus.xcdatamodel */;
+			name = LentaPlus.xcdatamodeld;
+			path = CoreData/LentaPlus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C09BF49D21F8F84000FEA949 /* Project object */;
 }
