@@ -130,8 +130,8 @@ class NewsViewController: UIViewController, TableViewDelegate {
         //listOfFonts()
         
         // Show path to SQLite local storage
-        //let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        //print(paths[0])
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
         
 
         items = getRubrics()
@@ -180,6 +180,7 @@ class NewsViewController: UIViewController, TableViewDelegate {
         self.navigationController?.view.backgroundColor = UIColor.darkGray
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.backgroundColor = UIColor.darkGray
+
         if needBarUpdateStatus == -1 {
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
             self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -191,6 +192,10 @@ class NewsViewController: UIViewController, TableViewDelegate {
             self.navigationItem.titleView = NavItemTitle.instance.getNavTitle(titleRubric: items[selectedItemIndex].title, width: bannerWidth, height: bannerHeight)
         }
         needBarUpdateStatus = 0
+        guard let statusBarView = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        statusBarView.backgroundColor = .darkGray
     }
     
     // Calculate the menu offset based on the content offset of the scroll view.

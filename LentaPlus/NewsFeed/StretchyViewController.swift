@@ -38,9 +38,13 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor(hue: 100, saturation: 100, brightness: 100, alpha: 0)
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 85, green: 85, blue: 85, alpha: 0)
+        self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.topItem?.title = ""
+        guard let statusBarView = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        statusBarView.backgroundColor = .clear
     }
 
     override func viewDidLayoutSubviews() {
@@ -338,35 +342,23 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
     private var previousStatusBarHidden = false
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if previousStatusBarHidden != shouldHideStatusBar {
-            
-            UIView.animate(withDuration: 0.2, animations: {
-                self.setNeedsStatusBarAppearanceUpdate()
+        let frame = timeTitle.convert(timeTitle.bounds, to: nil)
+        guard let statusBarView = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        if frame.minY <= 80 {
+            UIView.animate(withDuration: 0.4, animations: {
+                statusBarView.backgroundColor = .darkGray
+                self.navigationController?.navigationBar.backgroundColor = .darkGray
             })
-            
-            previousStatusBarHidden = shouldHideStatusBar
-        }
-    }
-    
-    //MARK: - Status Bar Appearance
-    
-    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return .slide
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return shouldHideStatusBar
-    }
-    
-    private var shouldHideStatusBar: Bool {
-        let frame = textContainer.convert(textContainer.bounds, to: nil)
-        if #available(iOS 11.0, *) {
-            return frame.minY < view.safeAreaInsets.top
         } else {
-            return  true
+            UIView.animate(withDuration: 0.4, animations: {
+                statusBarView.backgroundColor = .clear
+                self.navigationController?.navigationBar.backgroundColor = UIColor(red: 85, green: 85, blue: 85, alpha: 0)
+            })
         }
     }
+    
 }
 
 extension String {
