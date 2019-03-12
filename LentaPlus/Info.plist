@@ -26,8 +26,20 @@
 		<string>PT Root UI_Light.ttf</string>
 		<string>PT Root UI_Medium.ttf</string>
 		<string>PT Root UI_Regular.ttf</string>
-		<string>MinionPro-Bold.otf</string>
-		<string>MinionPro-Regular.otf</string>
+		<string>IBMPlexSerif-Bold.ttf</string>
+		<string>IBMPlexSerif-BoldItalic.ttf</string>
+		<string>IBMPlexSerif-ExtraLight.ttf</string>
+		<string>IBMPlexSerif-ExtraLightItalic.ttf</string>
+		<string>IBMPlexSerif-Italic.ttf</string>
+		<string>IBMPlexSerif-Light.ttf</string>
+		<string>IBMPlexSerif-LightItalic.ttf</string>
+		<string>IBMPlexSerif-Medium.ttf</string>
+		<string>IBMPlexSerif-MediumItalic.ttf</string>
+		<string>IBMPlexSerif-Regular.ttf</string>
+		<string>IBMPlexSerif-SemiBold.ttf</string>
+		<string>IBMPlexSerif-SemiBoldItalic.ttf</string>
+		<string>IBMPlexSerif-Thin.ttf</string>
+		<string>IBMPlexSerif-ThinItalic.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
