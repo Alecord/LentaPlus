@@ -2,7 +2,7 @@
 //  News+CoreDataProperties.swift
 //  LentaPlus
 //
-//  Created by Alex Cord on 3/4/19.
+//  Created by Alex Cord on 3/19/19.
 //  Copyright © 2019 Alex Cord. All rights reserved.
 //
 //

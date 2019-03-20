@@ -4,14 +4,16 @@ import CoreData
 import Alamofire
 import SwiftSoup
 
-class StretchyViewController: UIViewController, UIScrollViewDelegate {
+class StretchyViewController: UIViewController, UIScrollViewDelegate, UITextViewDelegate {
 
     private let scrollView = UIScrollView()
     private let timeTitle = UILabel()
     private let rubricTitle = UILabel()
     private let imageView = UIImageView()
     private let imageViewCover = UIImageView()
+    private let captionLabel = UILabel()
     private let textContainer = UIView()
+    private let contentText = UITextView()
     private let separatorContainer = UIImageView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
     private let news: News
     var bodies: [Body]!
@@ -33,6 +35,7 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let mainFont = UIFont(name: "IBMPlexSerif", size: CGFloat(integerLiteral: 17)) ?? UIFont.systemFont(ofSize: CGFloat(integerLiteral: 17), weight: UIFont.Weight.regular)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.paragraphSpacing = mainFont.lineHeight * 1.25
@@ -80,13 +83,17 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
                 NSAttributedString.Key.font: UIFont(name: "PTRootUI-Bold", size: CGFloat(integerLiteral: 22)) ?? UIFont.systemFont(ofSize: CGFloat(integerLiteral: 22), weight: UIFont.Weight.bold)
             ]
         ]
-
-        loadContent(url: news.link!)
-        viewConfiguration()
+        
+        createNewsElements()
+        
+        let id = news.id!
+        if id != nil {
+            LentaRest.instance.loadNewsContent(id: id, completion: reloadContent)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        print("viewWillAppear")
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 85, green: 85, blue: 85, alpha: 0)
         self.navigationController?.navigationBar.tintColor = .white
@@ -95,11 +102,13 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             return
         }
         statusBarView.backgroundColor = .clear
+        super.viewWillAppear(animated)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        print("viewDidLayoutSubviews")
+
         if #available(iOS 11.0, *) {
             scrollView.scrollIndicatorInsets = view.safeAreaInsets
             scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: view.safeAreaInsets.bottom, right: 0)
@@ -108,72 +117,34 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    func viewConfiguration() -> Void {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print("viewWillLayoutSubviews")
+    }
+    
+    func createNewsElements() -> Void {
         view.backgroundColor = .white
-        
-        if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
-        } else {
-            // Fallback on earlier versions
-        }
-        scrollView.delegate = self
-        
+
         // Image configuration
-        var caption: String? = ""
-        var credits: String? = ""
-        imageView.image = UIImage(named: "Header")
+        imageView.image = UIImage(named: "ImageCover")
         imageView.backgroundColor = .black
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        if (news.images?.count)! > 0 {
-            for item in (news.images)! {
-                let image = item as! Image
-                let url = image.url ?? ""
-                caption = image.caption
-                credits = image.credits
-                if url != "" {
-                    loadImage(url: url, place: imageView)
-                    break
-                }
-            }
-        }
+        
         imageViewCover.image = UIImage(named: "ImageCover")
         imageViewCover.contentMode = .scaleAspectFill
         imageViewCover.clipsToBounds = true
         imageViewCover.alpha = 0.3
 
-        // Photo caption configuration
-        let caprionLabel = UILabel()
-        caprionLabel.numberOfLines = 0
-        let muttableText = NSMutableAttributedString()
-        if caption != nil {
-            let attributes1 =  [
-                NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont(name: "IBMPlexSerif-Bold", size: 13) ?? UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold)
-            ]
-            let muttableCaption = NSMutableAttributedString(string: caption!, attributes: attributes1)
-            muttableText.append(muttableCaption)
-        }
-
-        if credits != nil {
-            let attributes2 =  [
-                NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont(name: "IBMPlexSerif", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
-            ]
-            let muttableCredits = NSMutableAttributedString(string: credits!, attributes: attributes2)
-            muttableText.append(NSMutableAttributedString(string: "\n"))
-            muttableText.append(muttableCredits)
-        }
-        caprionLabel.attributedText = muttableText
-
+        // Image caption configuration
+        captionLabel.numberOfLines = 0
 
         // Time configuration
         timeTitle.textColor = UIColor.secondColor
         timeTitle.font = UIFont(name: "IBMPlexSerif", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
         timeTitle.numberOfLines = 0
-        timeTitle.text = CoreDataManager.instance.GetTimeLocalosated(modified: Double(news.modified))
-        
-        // Separator
+
+        // Time separator
         separatorContainer.image = UIImage(named: "Circle")
         separatorContainer.contentMode = .scaleAspectFit
         separatorContainer.clipsToBounds = true
@@ -182,15 +153,22 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
         rubricTitle.textColor = .gray
         rubricTitle.font = UIFont(name: "IBMPlexSerif", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
         rubricTitle.numberOfLines = 0
-        let rubric: String = news.rubric ?? "Новое"
-        rubricTitle.text = CoreDataManager.instance.GetRubricTitle(name: rubric)
 
         // Containers configuration
         let imageContainer = UIView()
         imageContainer.backgroundColor = .white
         
         textContainer.backgroundColor = .clear
-        //textContainer.addSubview(contentText)
+        
+        contentText.textColor = .black
+        contentText.isUserInteractionEnabled = true
+        contentText.isEditable = false
+        contentText.isScrollEnabled = false
+        contentText.delaysContentTouches = false
+        contentText.dataDetectorTypes = .link
+        contentText.delegate = self
+        textContainer.addSubview(contentText)
+
         
         let textBacking = UIView()
         textBacking.backgroundColor = .white
@@ -202,11 +180,12 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
         scrollView.addSubview(textContainer)
         scrollView.addSubview(imageView)
         scrollView.addSubview(imageViewCover)
-        scrollView.addSubview(caprionLabel)
+        scrollView.addSubview(captionLabel)
         scrollView.addSubview(timeTitle)
         scrollView.addSubview(separatorContainer)
         scrollView.addSubview(rubricTitle)
-
+        
+        
         scrollView.snp.makeConstraints {
             make in
             make.edges.equalTo(view)
@@ -234,20 +213,20 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             make.height.greaterThanOrEqualTo(imageContainer.snp.height).priority(.required)
             make.bottom.equalTo(imageContainer.snp.bottom)
         }
-
-        caprionLabel.snp.makeConstraints {
+        
+        captionLabel.snp.makeConstraints {
             make in
             make.left.equalTo(scrollView).offset(15)
             make.bottom.equalTo(imageContainer.snp.bottom).offset(-15)
         }
-
+        
         textContainer.snp.makeConstraints {
             make in
             make.top.equalTo(imageContainer.snp.bottom)
             make.left.right.equalTo(view)
             make.bottom.equalTo(scrollView)
         }
-
+        
         timeTitle.snp.makeConstraints {
             make in
             make.left.equalTo(textContainer).offset(15)
@@ -260,7 +239,7 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             make.centerY.equalTo(timeTitle.snp.centerY)
             make.top.equalTo(textContainer).offset(15)
         }
-
+        
         rubricTitle.snp.makeConstraints {
             make in
             make.left.equalTo(separatorContainer.snp.right).offset(10)
@@ -271,26 +250,10 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
         
         textBacking.snp.makeConstraints {
             make in
-            
             make.left.right.equalTo(view)
             make.top.equalTo(textContainer)
             make.bottom.equalTo(view)
         }
-        
-        
-    }
-    
-    func reloadContent(data: News) {
-        let contentText = UITextView()
-        contentText.textColor = .black
-        contentText.isUserInteractionEnabled = true
-        contentText.isEditable = false
-        contentText.isScrollEnabled = false
-        contentText.delaysContentTouches = false
-        textContainer.addSubview(contentText)
-        
-        let mutableText = NSMutableAttributedString(string: data.title!, attributes: styles["h1"])
-        mutableText.append(NSAttributedString(string: "\n\n"))
         
         contentText.snp.makeConstraints {
             make in
@@ -300,10 +263,79 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             make.top.equalTo(timeTitle.snp.bottom).offset(0)
             make.bottom.equalTo(textContainer).offset(-10)
         }
+        
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            // Fallback on earlier versions
+        }
+        scrollView.delegate = self
 
-        let bCount: Int = data.bodies?.count ?? 0
+        view.layoutIfNeeded()
+        view.updateConstraints()
+
+    }
+    
+    func navigateToNews(news: News) {
+        let lentaVC = StretchyViewController(news: news)
+        self.navigationController?.pushViewController(lentaVC, animated: true)
+    }
+    
+    func reloadContent(news: News) {
+        print("reloadContent")
+        
+        // Set image data
+        var caption: String? = ""
+        var credits: String? = ""
+        if (news.images?.count)! > 0 {
+            for item in (news.images)! {
+                let image = item as! Image
+                let url = image.url ?? ""
+                caption = image.caption
+                credits = image.credits
+                if url != "" {
+                    loadImage(url: url, place: imageView)
+                    break
+                }
+            }
+        }
+        
+        // Set image caption and credits
+        let muttableText = NSMutableAttributedString()
+        if caption != nil {
+            let attributes1 =  [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.font: UIFont(name: "IBMPlexSerif-Bold", size: 13) ?? UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold)
+            ]
+            let muttableCaption = NSMutableAttributedString(string: caption!, attributes: attributes1)
+            muttableText.append(muttableCaption)
+        }
+        if credits != nil {
+            let attributes2 =  [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.font: UIFont(name: "IBMPlexSerif", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
+            ]
+            let muttableCredits = NSMutableAttributedString(string: credits!, attributes: attributes2)
+            muttableText.append(NSMutableAttributedString(string: "\n"))
+            muttableText.append(muttableCredits)
+        }
+        captionLabel.attributedText = muttableText
+        
+        // Set news time
+        timeTitle.text = CoreDataManager.instance.GetTimeLocalosated(modified: Double(news.modified))
+        
+        
+        // Set rubric
+        let rubric: String = news.rubric ?? "Новое"
+        rubricTitle.text = CoreDataManager.instance.GetRubricTitle(name: rubric)
+        
+        // Set news text
+        let mutableText = NSMutableAttributedString(string: news.title!, attributes: styles["h1"])
+        mutableText.append(NSAttributedString(string: "\n\n"))
+        
+        let bCount: Int = news.bodies?.count ?? 0
         if bCount != 0 {
-            var bodies = data.bodies?.allObjects as! [Body]
+            var bodies = news.bodies?.allObjects as! [Body]
             bodies = bodies.sorted(by: { $0.position < $1.position })
             
             for (index, body) in bodies.enumerated() {
@@ -318,17 +350,15 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
                 mutableText.append(mutableBody)
                 if index < bodies.count-1 {
                     mutableText.append(NSAttributedString(string: "\n"))
-            }
+                }
             }
         } else {
-            let mutableRightcol = NSMutableAttributedString(string: data.rightcol!, attributes: styles["p"])
+            let mutableRightcol = NSMutableAttributedString(string: news.rightcol!, attributes: styles["p"])
             mutableText.append(mutableRightcol)
         }
         contentText.linkTextAttributes = styles["link"]
         contentText.attributedText = mutableText
-        
-        view.layoutIfNeeded()
-        view.updateConstraints()
+
     }
         
     func parseItalicBoldContent(content: String) -> NSMutableAttributedString {
@@ -370,6 +400,10 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
             }
         }
         return attributedString
+    }
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        return LentaRest.instance.loadNewsById(link: URL.absoluteString, completion: navigateToNews)
     }
     
     func loadImage(url: String, place: UIImageView) {
@@ -439,7 +473,7 @@ class StretchyViewController: UIViewController, UIScrollViewDelegate {
                             }
                             CoreDataManager.instance.saveContext()
                         }
-                        self.reloadContent(data: results![0] as News)
+                        self.reloadContent(news: results![0] as News)
                     }
                 } catch {
                     print("Fetch Failed: \(error)")
@@ -491,5 +525,4 @@ extension String {
         let str = self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         return str
     }
-    
 }

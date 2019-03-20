@@ -23,10 +23,12 @@
 		C0269E6D223795A3003FA3AE /* IBMPlexSerif-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0269E5F22379568003FA3AE /* IBMPlexSerif-SemiBoldItalic.ttf */; };
 		C0269E6E223795A3003FA3AE /* IBMPlexSerif-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0269E5822379567003FA3AE /* IBMPlexSerif-Thin.ttf */; };
 		C0269E6F223795A3003FA3AE /* IBMPlexSerif-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0269E5C22379568003FA3AE /* IBMPlexSerif-ThinItalic.ttf */; };
+		C0269E97223832E6003FA3AE /* RegexHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0269E96223832E6003FA3AE /* RegexHelpers.swift */; };
 		C0387728220C5D9000CE3C66 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */; };
 		C038772A220C7DA700CE3C66 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0387729220C7DA700CE3C66 /* TableViewController.swift */; };
 		C0387730220C8C9700CE3C66 /* NewsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038772F220C8C9700CE3C66 /* NewsCellController.swift */; };
 		C0387732220C90A400CE3C66 /* NewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0387731220C90A400CE3C66 /* NewsFeedCell.xib */; };
+		C052DF5322410542009FB63E /* LentaRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052DF5222410542009FB63E /* LentaRest.swift */; };
 		C07627BF21F8FDEB00D9350A /* PT Root UI_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BE21F8FD9900D9350A /* PT Root UI_Bold.ttf */; };
 		C07627C021F8FDEB00D9350A /* PT Root UI_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */; };
 		C07627C121F8FDEB00D9350A /* PT Root UI_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */; };
@@ -69,10 +71,12 @@
 		C0269E5F22379568003FA3AE /* IBMPlexSerif-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSerif-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C0269E6022379568003FA3AE /* IBMPlexSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSerif-Bold.ttf"; sourceTree = "<group>"; };
 		C0269E6122379568003FA3AE /* IBMPlexSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSerif-Regular.ttf"; sourceTree = "<group>"; };
+		C0269E96223832E6003FA3AE /* RegexHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexHelpers.swift; sourceTree = "<group>"; };
 		C0387727220C5D8F00CE3C66 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		C0387729220C7DA700CE3C66 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C038772F220C8C9700CE3C66 /* NewsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellController.swift; sourceTree = "<group>"; };
 		C0387731220C90A400CE3C66 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
+		C052DF5222410542009FB63E /* LentaRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaRest.swift; sourceTree = "<group>"; };
 		C07627BB21F8FD9900D9350A /* PT Root UI_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Light.ttf"; sourceTree = "<group>"; };
 		C07627BC21F8FD9900D9350A /* PT Root UI_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Medium.ttf"; sourceTree = "<group>"; };
 		C07627BD21F8FD9900D9350A /* PT Root UI_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Root UI_Regular.ttf"; sourceTree = "<group>"; };
@@ -126,7 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				C0E034202201A0D2005E69FD /* LentaModel.swift */,
+				C052DF5222410542009FB63E /* LentaRest.swift */,
 				C012776C2228041900D02413 /* StretchyViewController.swift */,
+				C0269E96223832E6003FA3AE /* RegexHelpers.swift */,
 				C038772F220C8C9700CE3C66 /* NewsCellController.swift */,
 				C0387729220C7DA700CE3C66 /* TableViewController.swift */,
 				C0387731220C90A400CE3C66 /* NewsFeedCell.xib */,
@@ -392,8 +398,10 @@
 				C0387730220C8C9700CE3C66 /* NewsCellController.swift in Sources */,
 				C0EC514B2222A7720017BB41 /* Tag+CoreDataClass.swift in Sources */,
 				C0EC51482222A7720017BB41 /* Rubric+CoreDataProperties.swift in Sources */,
+				C052DF5322410542009FB63E /* LentaRest.swift in Sources */,
 				C09BF4A921F8F84000FEA949 /* AppDelegate.swift in Sources */,
 				C0DDF0D22204D7AA0028A694 /* NewsViewController.swift in Sources */,
+				C0269E97223832E6003FA3AE /* RegexHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
